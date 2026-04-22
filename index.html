@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>comma space - Café</title>
+
+    <!-- FAVICON -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+
+<body>
+<!-- NAVBAR -->
+<nav id="navbar">
+    <a href="#" class="logo">Comma<span>Space</span></a>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#tentang">About us</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reservation" class="nav-cta">Find a Table</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+ 
+<!-- sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-panel">
+        <!-- FIX #5: button sidebar-close syntax bener -->
+        <button class="sidebar-close" id="sidebarClose">✕</button>
+        <span class="sidebar-logo">comma <em style="font-style:italic">space</em></span>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#tentang">About us</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="sidebar-visit">
+            <h4>Visit Us</h4>
+            <p>Jl. Legok Hangseur No.67 <br> Purwokerto, Jawa Tengah<br><br>07:00 am – 10:00 pm<br><a href="mailto:hello@commaspace.id">hello@commaspace.id</a></p>
+        </div>
+    </div>
+</div>
+ 
+<!-- hero section -->
+<section class="hero" id="home">
+    <div class="hero-slides">
+        <div class="hero-slide active">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&auto=format&fit=crop&q=80" alt="coffee">
+        </div>
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600&auto=format&fit=crop&q=80" alt="cafe">
+        </div>
+        <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1600&auto=format&fit=crop&q=80" alt="food">
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <!-- FIX #2: id="heroPrev" konsisten dengan JS -->
+    <button class="hero-arrow prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+    <div class="hero-content">
+        <span class="hero-tag">Moment of your own</span>
+        <div class="hero-divider"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+        <h1>Where Every Sip <br><em>Tells a Story</em></h1>
+        <p>A cozy corner to slow down, sip well, and savor the moment.</p>
+        <a href="#menu" class="hero-button">Explore the menu</a>
+    </div>
+    <button class="hero-arrow next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="hero-nav" id="heroDots">
+        <button class="hero-dot active"></button>
+        <button class="hero-dot"></button>
+        <button class="hero-dot"></button>
+    </div>
+</section>
+ 
+<!-- offerings -->
+<section class="offerings">
+    <div class="offering-heading reveal">
+        <span class="section-tag">What we serve</span>
+        <div class="section-divider"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+        <h2 class="section-title">We offer top notch <br>Flavor for royalty</h2>
+    </div>
+    <div class="offering grid">
+        <div class="offering-card reveal">
+            <div class="corner tl"></div>
+            <div class="corner br"></div>
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&auto=format&fit=crop&q=80" alt="coffee">
+            <div class="offering-info">
+                <h3>Specialty Coffee</h3>
+                <a href="#menu">View Menu</a>
+            </div>
+        </div>
+        <div class="offering-card reveal reveal-delay-1">
+            <div class="corner tl"></div>
+            <div class="corner br"></div>
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&auto=format&fit=crop&q=80" alt="Drinks"/>
+            <div class="offering-info">
+                <h3>Signature Drinks</h3>
+                <a href="#menu">View Menu</a>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- tentang kami -->
+<section id="tentang" style="background:var(--black);">
+    <div class="tentang">
+        <div class="tentangText">
+            <span class="section-tag awal">Our Story</span>
+            <div class="section-divider reveal" style="justify-content:flex-start"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+            <h2 class="reveal">Every Flavor<br>Tells a Story</h2>
+            <p class="reveal">Comma Space lahir dari sebuah keinginan sederhana — menciptakan ruang jeda di tengah kesibukan kota. Sebuah tempat di mana kopi terasa lebih bermakna, makanan dimasak dengan cinta, dan setiap sudut mengundangmu untuk berhenti sejenak.</p>
+            <p class="reveal">Kami percaya bahwa momen terbaik hadir bukan di akhir tujuan, melainkan di jeda perjalanan. Itulah Comma Space.</p>
+            <div class="tentang-contact reveal">
+                <small>reservation by phone</small>
+                <a href="tel:+6281234567890">+62 812 3456 7890</a>
+            </div>
+            <a href="#tentang" class="tentang-btn reveal">Read more</a>
+        </div>
+        <div class="image-tentang reveal">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80" alt="Cafe Interior">
+        </div>
+    </div>
+</section>
+ 
+<!-- special dish -->
+<section style="padding:0;">
+    <div class="special-inner">
+        <div class="special-image">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&auto=format&fit=crop&q=80" alt="Special Dish"/>
+        </div>
+        <div class="special-content">
+            <span class="section-tag reveal">Special Dish</span>
+            <div class="section-divider reveal" style="justify-content:flex-start"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+            <h2 class="reveal">Truffle Mushroom <br>Pasta</h2>
+            <p class="reveal">Pasta homemade dengan saus krim truffle yang kaya rasa, jamur segar panggang, dan taburan parmesan aged. Sebuah harmoni antara kesederhanaan dan kemewahan dalam satu piring.</p>
+            <div class="special-price">
+                <span class="price old">Rp. 85.000</span>
+                <span class="price new">Rp. 60.000</span>
+            </div>
+            <a href="#menu" class="special-btn">View All Menu</a>
+        </div>
+    </div>
+</section>
+ 
+<!-- menu -->
+<section class="menu-section" id="menu">
+    <span class="section-tag reveal">Special Selection</span>
+    <div class="section-divider reveal"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+    <h2 class="section-title reveal">Delicious Menu</h2>
+    <div class="menu-grid">
+        <div class="menu-item reveal" data-category="drinks" data-price="38000">
+            <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?w=200&auto=format&fit=crop&q=80" alt="Matcha Latte">
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">Matcha Latte</span><span class="badge">Bestseller</span></div>
+                <p class="menu-item-desc">Ceremonial grade matcha, steamed oat milk</p>
+            </div>
+            <span class="menu-item-price">Rp 38.000</span>
+        </div>
+        <div class="menu-item reveal" data-category="food" data-price="52000">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=200&auto=format&fit=crop&q=80" alt="Avocado Toast"/>
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">Avocado Toast</span><span class="badge">New</span></div>
+                <p class="menu-item-desc">Sourdough, smashed avocado, poached egg</p>
+            </div>
+            <span class="menu-item-price">Rp 52.000</span>
+        </div>
+        <div class="menu-item reveal" data-category="drinks" data-price="42000">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&auto=format&fit=crop&q=80" alt="Cold Brew"/>
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">Signature Cold Brew</span></div>
+                <p class="menu-item-desc">18-hour cold brewed, served over ice</p>
+            </div>
+            <span class="menu-item-price">Rp 42.000</span>
+        </div>
+        <div class="menu-item reveal" data-category="food" data-price="48000">
+            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=200&auto=format&fit=crop&q=80" alt="French Toast"/>
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">French Toast</span></div>
+                <p class="menu-item-desc">Brioche, maple syrup, fresh berries, cream</p>
+            </div>
+            <span class="menu-item-price">Rp 48.000</span>
+        </div>
+        <div class="menu-item reveal" data-category="drinks" data-price="35000">
+            <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=200&auto=format&fit=crop&q=80" alt="Kombucha"/>
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">Kombucha Ginger</span><span class="badge">Seasonal</span></div>
+                <p class="menu-item-desc">Fermented tea, fresh ginger, lemon zest</p>
+            </div>
+            <span class="menu-item-price">Rp 35.000</span>
+        </div>
+        <div class="menu-item reveal" data-category="food" data-price="44000">
+            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200&auto=format&fit=crop&q=80" alt="Granola Bowl"/>
+            <div class="menu-item-info">
+                <div class="menu-item-top"><span class="menu-item-name">Granola Bowl</span></div>
+                <p class="menu-item-desc">Greek yogurt, house granola, seasonal fruit</p>
+            </div>
+            <span class="menu-item-price">Rp 44.000</span>
+        </div>
+    </div>
+    <div class="menu-footer reveal">
+        <small>Open daily from <b>07:00 am</b> to <b>10:00 pm</b></small>
+        <a href="#" class="view-btn">View All Menu</a>
+    </div>
+</section>
+ 
+<!-- reservasi -->
+<section class="reservation" id="reservation">
+    <div class="reservation-inner">
+        <div class="res-form reveal">
+            <h2>Online Reservation</h2>
+            <p>Booking via <a href="tel:+6281234567890">+62 812 3456 7890</a> or fill out the form</p>
+            <div class="form">
+                <div class="form-grup"><input type="text" placeholder="Your Name"></div>
+                <div class="form-grup"><input type="tel" placeholder="Phone Number"></div>
+            </div>
+            <div class="form">
+                <div class="form-grup">
+                    <select>
+                        <option>2 Person</option>
+                        <option>4 Person</option>
+                        <option>6 Person</option>
+                        <option>8+ Person</option>
+                    </select>
+                </div>
+                <div class="form-grup"><input type="date"></div>
+            </div>
+            <div class="form">
+                <div class="form-grup"><input type="time"></div>
+                <div class="form-grup"><input type="email" placeholder="Email address"></div>
+            </div>
+            <div class="form-grup"><textarea placeholder="Special Request / Message"></textarea></div>
+            <button class="submit-btn">Book a Table</button>
+        </div>
+        <!-- FIX #4: tag <h4> yang rusak sudah diperbaiki di contact section -->
+        <div class="res-contact reveal" id="contact">
+            <h2>Contact Us</h2>
+            <p style="color:var(--gray);font-size:12px;letter-spacing:1px;margin-bottom:30px;">We'd love to hear from you</p>
+            <div class="contact-item">
+                <h4>Booking Request</h4>
+                <p>+62 812 3456 7890</p>
+            </div>
+            <div class="contact-item">
+                <h4>Location</h4>
+                <span>Jl. Sudirman No. 21, Purwokerto<br>Jawa Tengah, Indonesia</span>
+            </div>
+            <div class="contact-item">
+                <h4>Morning Hours</h4>
+                <span>Monday – Friday: 07.00 am – 02.00 pm<br>Saturday – Sunday: 08.00 am – 03.00 pm</span>
+            </div>
+            <div class="contact-item">
+                <h4>Evening Hours</h4>
+                <span>Monday – Sunday: 04.00 pm – 10.00 pm</span>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- Events -->
+<section class="events">
+    <div style="text-align:center" class="reveal">
+        <span class="section-tag">Recent Updates</span>
+        <div class="section-divider"><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i><i class="fas fa-diamond"></i></div>
+        <h2 class="section-title">Upcoming Events</h2>
+    </div>
+    <div class="events-grid">
+        <div class="event-card reveal">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&auto=format&fit=crop&q=80" alt="Event"/>
+            <div class="event-overlay"></div>
+            <span class="event-date">10/05/2025</span>
+            <div class="event-info">
+                <span class="event-tag">Coffee Tasting</span>
+                <h3>Single Origin Pour Over Workshop</h3>
+            </div>
+        </div>
+        <div class="event-card reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&auto=format&fit=crop&q=80" alt="Event"/>
+            <div class="event-overlay"></div>
+            <span class="event-date">17/05/2025</span>
+            <div class="event-info">
+                <span class="event-tag">Community</span>
+                <h3>Saturday Brunch & Live Acoustic Music</h3>
+            </div>
+        </div>
+        <div class="event-card reveal reveal-delay-2">
+            <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?w=700&auto=format&fit=crop&q=80" alt="Event"/>
+            <div class="event-overlay"></div>
+            <span class="event-date">24/05/2025</span>
+            <div class="event-info">
+                <span class="event-tag">Workshop</span>
+                <h3>Latte Art & Barista Basics for Beginners</h3>
+            </div>
+        </div>
+    </div>
+    <div class="events-footer reveal">
+        <a href="#" class="view-btn">View Our Blog</a>
+    </div>
+</section>
+ 
+<!-- footer -->
+<footer>
+    <div class="footer-main">
+        <span class="footer-logo">comma<em style="font-style:italic">space</em></span>
+        <p class="footer-tagline">Cafe &amp; Brunch — Purwokerto</p>
+        <div class="footer-info">
+            <p>Jl. Sudirman No. 21, Purwokerto, Jawa Tengah</p>
+            <p><a href="mailto:hello@commaspace.id">hello@commaspace.id</a></p>
+            <p>Booking: <a href="tel:+6281234567890">+62 812 3456 7890</a></p>
+            <p>Open: 07:00 am – 10:00 pm</p>
+        </div>
+        <div class="footer-social">
+            <a href="#">Facebook</a>
+            <span style="color:var(--border)">|</span>
+            <a href="#">Instagram</a>
+            <span style="color:var(--border)">|</span>
+            <a href="#">Twitter</a>
+            <span style="color:var(--border)">|</span>
+            <a href="#">TikTok</a>
+            <span style="color:var(--border)">|</span>
+            <a href="#">Google Maps</a>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Get News &amp; Offers</h4>
+            <p>Subscribe &amp; get <b>10% Off</b> your first order</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="✉  Your email address"/>
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">About Us</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-bottom">
+        <p>© 2025 Comma Space. All Rights Reserved.</p>
+    </div>
+</footer>
+ 
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+
+<!-- JavaScript -->
+<script src="script/script.js"> 
+
+</script>
+</body>
+</html>
